@@ -1,0 +1,24 @@
+Options +ExecCGI +FollowSymLinks -MultiViews
+
+RewriteEngine on
+RewriteBase /
+
+# browser requests PHP
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^\ ]+)\.php
+RewriteRule ^/?(.*)\.php$ /$1 [L,R=301]
+
+# check to see if the request is for a php file
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^/?(.*)$ /$1.php [L]
+
+RewriteCond %[REQUEST_FILENAME] !-f
+RewriteCond %[REQUEST_FILENAME] !-d
+RewriteCond %[REQUEST_FILENAME].html -f
+RewriteRule ^(.*)$ /$1.html [L]
+
+RewriteCond %[REQUEST_FILENAME] !-f
+RewriteCond %[REQUEST_FILENAME] !-d
+RewriteCond %[REQUEST_FILENAME].php -f
+RewriteRule ^(.*)$ /$1.php [L]
+
+DirectoryIndex index.php index.html
