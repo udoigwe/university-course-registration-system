@@ -17,29 +17,19 @@
 					</a>
 				</li>
 
+				<li class="menu-title">Reports</li>
+
 				<li>
-					<a href="javascript: void(0);" class="waves-effect">
-						<i class="mdi mdi-bookmark-multiple"></i>
-						<span> Course Management </span>
-						<span class="menu-arrow"></span>
+					<a href="courses" class="waves-effect">
+						<i class="fa fa-check-circle"></i>
+						<span> Semester Specific <br />Registrations </span>
 					</a>
-					<ul class="nav-second-level" aria-expanded="false">
-						<li>
-							<a href="courses">Courses</a>
-						</li>
-						<li>
-							<a href="course-registrations">Course Registrations</a>
-						</li>
-						<li>
-							<a href="withdraw-course-registration">Withdraw Course Registration</a>
-						</li>
-					</ul>
 				</li>
 
 				<li>
 					<a href="department-registrations" class="waves-effect">
-						<i class="mdi mdi-office-building"></i>
-						<span> Dept. Registrations </span>
+						<i class="fa fa-check-circle"></i>
+						<span> Department Specific <br />Registrations </span>
 					</a>
 				</li>
 
@@ -64,7 +54,6 @@
 					</a>
 				</li>
 
-
 				<li>
 					<a href="department-total-enrollment" class="waves-effect">
 						<i class="mdi mdi-thumb-down"></i>
@@ -80,19 +69,10 @@
 				</li>
 
 				<li>
-					<a href="javascript: void(0);" class="waves-effect">
+					<a href="top-careers" class="waves-effect">
 						<i class="mdi mdi-office"></i>
-						<span> Career Management </span>
-						<span class="menu-arrow"></span>
+						<span> Top Careers </span>
 					</a>
-					<ul class="nav-second-level" aria-expanded="false">
-						<li>
-							<a href="top-careers">Top Careers</a>
-						</li>
-						<li>
-							<a href="career-tags">Career Tags</a>
-						</li>
-					</ul>
 				</li>
 
 				<li>
@@ -100,6 +80,37 @@
 						<i class="mdi mdi-octagram"></i>
 						<span> Grade Distribution </span>
 					</a>
+				</li>
+
+				<li class="menu-title">Operations</li>
+
+				<li>
+					<a href="javascript: void(0);" class="waves-effect">
+						<i class="mdi mdi-bookmark-multiple"></i>
+						<span> Course Management </span>
+						<span class="menu-arrow"></span>
+					</a>
+					<ul class="nav-second-level" aria-expanded="false">
+						<li>
+							<a href="course-registrations">Course Registrations</a>
+						</li>
+						<li>
+							<a href="withdraw-course-registration">Withdraw Course Registration</a>
+						</li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="javascript: void(0);" class="waves-effect">
+						<i class="mdi mdi-office"></i>
+						<span> Career Management </span>
+						<span class="menu-arrow"></span>
+					</a>
+					<ul class="nav-second-level" aria-expanded="false">
+						<li>
+							<a href="career-tags">Career Tags</a>
+						</li>
+					</ul>
 				</li>
 
 				<li>
