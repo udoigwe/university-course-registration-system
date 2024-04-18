@@ -94,7 +94,7 @@
     <?php include '../includes/js.php'; ?>
 
     <!-- page script -->
-    <script src="../../assets/js/pages/admin/courses.js"></script>
+    <script src="../../assets/js/pages/admin/courses.js?v=2"></script>
 
 </body>
 
