@@ -256,19 +256,13 @@ if (isset($_GET["call"]) && !empty($_GET["call"])) {
                 } elseif ($action === "get_multi_disciplinary_students") {
 
                     try {
-                        $stmt = $mysqli->prepare("SELECT s.FirstName, s.LastName
-                            FROM Student s
-                            WHERE NOT EXISTS (
-                                SELECT d.DepartmentCode
-                                FROM Department d
-                                WHERE NOT EXISTS (
-                                    SELECT 1
-                                    FROM courseRegistration r
-                                    JOIN CourseOffering co ON r.courseCode = co.courseCode
-                                    JOIN Course c ON co.CourseCode = c.CourseCode
-                                    WHERE r.StudentID = s.StudentID AND c.DepartmentCode = d.DepartmentCode
-                                )
-                            );
+                        $stmt = $mysqli->prepare("SELECT s.studentID, s.firstName, s.lastName, s.email
+                            FROM student s
+                            JOIN courseRegistration cr ON s.studentID = cr.studentID
+                            JOIN course c ON cr.courseCode = c.courseCode
+                            JOIN department d ON c.departmentCode = d.departmentCode
+                            GROUP BY s.studentID
+                            HAVING COUNT(DISTINCT d.departmentCode) > 1;
                         ");
                         $stmt->execute();
                         $result = $stmt->get_result();
