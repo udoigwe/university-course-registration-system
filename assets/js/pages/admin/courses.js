@@ -1108,8 +1108,9 @@ $(function () {
                                     return meta.row + meta.settings._iDisplayStart + 1;
                                 }
                             },
-                            {data: 'FirstName'},
-                            {data: 'LastName'}
+                            {data: 'firstName'},
+                            {data: 'lastName'},
+                            {data: 'email'}
                         ]  
                     });
 
